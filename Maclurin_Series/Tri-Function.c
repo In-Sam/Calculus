@@ -12,7 +12,6 @@ long long Factorial(long long a);
 void cancellate(Fraction * a);
 Fraction addition(Fraction a, Fraction b);
 Fraction multiple(Fraction a, Fraction b);
-Fraction divise(Fraction a, Fraction b);
 // declaration
 
 // main
@@ -196,20 +195,6 @@ Fraction multiple(Fraction a, Fraction b) {
 	
 	multiplier.above = (a.above) * (b.above);
 	multiplier.below = (a.below) * (b.below);
-	cancellate(&multiplier);
-
-	return multiplier;
-}
-Fraction divise(Fraction a, Fraction b) {
-	Fraction multiplier;
-	
-	multiplier.above = (a.above) * (b.below);
-	multiplier.below = (a.below) * (b.above);
-
-	if ( multiplier.below < 0 ) {
-		multiplier.below *= -1;
-		multiplier.above *= -1;
-	}
 	cancellate(&multiplier);
 
 	return multiplier;
