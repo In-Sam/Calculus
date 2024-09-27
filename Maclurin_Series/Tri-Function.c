@@ -214,4 +214,3 @@ Fraction divise(Fraction a, Fraction b) {
 
 	return multiplier;
 }
-
